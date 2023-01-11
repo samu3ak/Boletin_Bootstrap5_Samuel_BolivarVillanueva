@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Ejercicio 5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="p-3 mb-2 bg-primary display-6 text-white">Bootstrap 5 - Formulario</div>
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-4 position-relative">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                            <!-- Mensajes para validación   -->
+                            <div class="valid-tooltip">¡Campo válido!</div>
+                            <div class="invalid-tooltip">Debe completar los datos.</div>
+                        </div>
+                        <div class="col-md-4 position-relative">
+                            <label for="apellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" required>
+                            <!-- Mensajes para validación   -->
+                            <div class="valid-tooltip">¡Campo válido!</div>
+                            <div class="invalid-tooltip">Debe completar los datos.</div>
+                        </div>
+                        <div class="col-md-4 position-relative">
+                            <label for="ciudad" class="form-label">Ciudad</label>
+                            <select class="form-select" id="ciudad" required>
+                                <option selected disabled value="">Seleccione...</option>
+                                <option>Sevilla</option>
+                                <option>Huelva</option>
+                                <option>Cádiz</option>
+                                <option>Granada</option>
+                                <option>Almería</option>
+                                <option>Córdoba</option>
+                                <option>Málaga</option>
+                            </select>
+                            <!-- Mensajes para validación   -->
+                            <div class="valid-tooltip">¡Campo válido!</div>
+                            <div class="invalid-tooltip">Debe completar los datos.</div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-warning fw-bold float-end" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+
+    <script>// Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()</script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="../js/bootstrap.min.js">
+    </script>
+</body>
+
+</html>
